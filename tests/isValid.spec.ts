@@ -84,8 +84,8 @@ describe('method isValid', () => {
       const validity = Cnj.fromString('0000001-64.2001.3.01.0001').isValid();
       expect(validity).toBeFalsy();
     });
-    test('0000001-42.2001.4.06.0001', () => {
-      const validity = Cnj.fromString('0000001-42.2001.4.06.0001').isValid();
+    test('0000001-85.2001.4.08.0001', () => {
+      const validity = Cnj.fromString('0000001-85.2001.4.08.0001').isValid();
       expect(validity).toBeFalsy();
     });
     test('0000001-30.2001.5.25.0001', () => {
@@ -171,6 +171,12 @@ describe('method isValid', () => {
     test('0506354-51.2050.8.09.0051', () => {
       const validity = Cnj.fromString('0506354-51.2050.8.09.0051').isValid();
       expect(validity).toBeFalsy();
+    });
+  });
+  describe('trf6', () => {
+    test('1002023-28.2022.4.06.3814', () => {
+      const validity = Cnj.fromString('1002023-28.2022.4.06.3814').isValid();
+      expect(validity).toBeTruthy();
     });
   });
 });
